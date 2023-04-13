@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10px;
+}
+#container {
+    border: 5px white solid;
+    border-radius: 10px;
+    height: 700px;
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.history-gameplay {
+    display: flex;
+    height: 70%;
+}
+#matchHistory {
+    border-right: 3px white solid;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+#matchHistory span {
+    color: white;
+    font-size: 1.5rem;
+    padding-top: 10px;
+        scrollbar-width: thin;
+    
+
+}
+.participants-gameplay {
+    width: 80%;
+    height: 20%;
+    color: white;
+    
+}
+.participants {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.participants span {
+    font-size: 2rem;
+}
+#gameplay {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.scores-buttons {
+    display: flex;
+    height: 30%;
+}
+
+.scores {
+    width: 30%;
+    border-top: 3px white solid;
+    border-right: 3px white solid;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.scores span {
+    font-size: 30px;
+}
+.buttons {
+    border-top: 3px white solid;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+.buttons button {
+    font-size: 70px;
+    border: none;
+    background-color: black;
+    gap: 30px;
+}
+.buttons button:hover {
+    cursor: pointer;
+    font-size: 90px;
+    transition: 200ms ease-in-out;
+}
+
+
+
+/* FROM JS */
+.item-div {
+    position: absolute;
+    left: 1000px;
+    top: 200px;
+    font-size: 10rem;
+    animation-name: left;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    
+}
+
+@keyframes left {
+    0% {
+        transform: translateX(0);
+        transition: all ease-in-out;
+    }
+    25% {
+        transform: translateX(-165px);
+        transition: all ease-in-out;
+    }
+    75% {
+        transform: translateX(0px);
+        transition: all ease-in-out;
+    }
+    100% {
+        transform: translateX(0);
+        transition: all ease-in-out;
+    }
+}
+.new-player {
+    position: absolute;
+    left: 530px;
+    top: 200px;
+    font-size: 10rem;
+    animation-name: right;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes right {
+    0% {
+        transform: translateX(0);
+        transition: all ease-in-out;
+    }
+    25% {
+        transform: translateX(165px);
+        transition: all ease-in-out;
+    }
+    75% {
+        transform: translateX(0px);
+        transition: all ease-in-out;
+    }
+    100% {
+        transform: translateX(0);
+        transition: all ease-in-out;
+    }
+}
+.nxt-round-btn {
+    position: absolute;
+    top: 460px;
+    left: 850px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255, 200, 61);
+}
+.nxt-round-btn:hover {
+    cursor: pointer;
+    background-color: rgb(128, 128, 34);
+}
+.next-round {
+    background-color: rgb(128, 128, 34);
+}
+.next-round:hover {
+    background-color: rgb(255, 200, 61);
+}
